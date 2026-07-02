@@ -1,9 +1,13 @@
+import { Fragment } from 'react';
+
 import { PostInfo } from '../PostInfo/PostInfo';
 
 export const PostList = ({ posts }) => (
   <div className="PostList">
     {posts.map(post => (
-      <PostInfo post={post} key={post.id} />
+      <Fragment key={post.id}>
+        <PostInfo post={post} />
+      </Fragment>
     ))}
   </div>
 );
